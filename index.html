@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Operations Portfolio | [Your Name]</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Section */
+        section {
+            margin-bottom: 80px;
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: #1e3c72;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+        }
+
+        section h3 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px;
+            color: #2c3e50;
+        }
+
+        /* Intro */
+        .intro {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        /* Outcomes Grid */
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .outcome-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #2a5298;
+            transition: transform 0.2s;
+        }
+
+        .outcome-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .outcome-card .metric {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .outcome-card .label {
+            font-size: 1rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .outcome-card .detail {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 8px;
+        }
+
+        /* Framework Boxes */
+        .framework-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        .framework-box h3 {
+            color: white;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .framework-box ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .framework-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .framework-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Methodology Cards */
+        .method-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .method-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+
+        .method-card:hover {
+            border-color: #2a5298;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .method-card h4 {
+            color: #1e3c72;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: #2a5298;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 10px 10px 0;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #1e3c72;
+        }
+
+        /* Architecture Diagram */
+        .architecture {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .outcomes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sales Operations Excellence</h1>
+        <p>End-to-End Revenue Operations Framework for B2B SaaS</p>
+    </header>
+
+    <div class="container">
+        <!-- Introduction -->
+        <section id="overview">
+            <p class="intro">
+                I designed and implemented a comprehensive three-layer sales operations framework that transformed forecast accuracy, pipeline visibility, and deal execution for complex B2B SaaS environments. This system addresses the core challenges faced by enterprise sales organizations: unpredictable forecasting, fragmented data, and inefficient deal progression.
+            </p>
+        </section>
+
+        <!-- Key Outcomes -->
+        <section id="outcomes">
+            <h2>Business Impact</h2>
+
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="metric">+18%</div>
+                    <div class="label">Forecast Accuracy</div>
+                    <div class="detail">Reduced volatility from 25% to stable baseline</div>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="metric">+40%</div>
+                    <div class="label">Meeting Efficiency</div>
+                    <div class="detail">Commit reviews: 2.0h → 1.2h</div>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="metric">95%</div>
+                    <div class="label">Coverage Attainment</div>
+                    <div class="detail">Teams meeting 3.0x target (from 60%)</div>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="metric">-30%</div>
+                    <div class="label">Deal Cycle Time</div>
+                    <div class="detail">Complex deals: 70d → 50d</div>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="metric">Week 1</div>
+                    <div class="label">Risk Visibility</div>
+                    <div class="detail">Advanced from quarter-end</div>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="metric">+25%</div>
+                    <div class="label">First-Time Success</div>
+                    <div class="detail">Handoff quality improvement</div>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="metric">-97%</div>
+                    <div class="label">Reporting Time</div>
+                    <div class="detail">From 2 days to 3 minutes</div>
+                </div>
+
+                <div class="outcome-card">
+                    <div class="metric">100%</div>
+                    <div class="label">Evidence Complete</div>
+                    <div class="detail">Commit validation compliance</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Framework -->
+        <section id="framework">
+            <h2>The Framework</h2>
+
+            <p style="font-size: 1.1rem; margin-bottom: 30px;">
+                A three-layer architecture connecting executive decision-making to tactical deal execution and complex transaction management.
+            </p>
+
+            <div class="framework-box">
+                <h3>Layer 1: Strategic Decision Layer</h3>
+                <p><strong>Executive GTM Health Dashboard</strong></p>
+                <ul>
+                    <li>Unified weekly scorecard for CRO and leadership team</li>
+                    <li>Consolidated Marketing, BDR, and Sales metrics</li>
+                    <li>3-minute quarterly progress assessment</li>
+                    <li>Coverage, forecast, funnel conversion, and cycle time tracking</li>
+                </ul>
+                <p style="margin-top: 15px;"><em>Outcome: Eliminated 3 conflicting reports; reduced reconciliation from 2 days to 3 minutes</em></p>
+            </div>
+
+            <div class="framework-box" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <h3>Layer 2: Tactical Execution Layer</h3>
+                <p><strong>Forecast Inspection & Pipeline Review</strong></p>
+                <ul>
+                    <li>Evidence-based forecast categorization (Commit/Best Case/Upside)</li>
+                    <li>MEDDPICC 8-element qualification framework</li>
+                    <li>7-item hard gate for Commit approval</li>
+                    <li>14 automated red flag detection rules</li>
+                    <li>Weekly inspection cadence (Monday → Friday resolution)</li>
+                </ul>
+                <p style="margin-top: 15px;"><em>Outcome: Forecast accuracy improved 18%; Commit meeting time reduced 40%</em></p>
+            </div>
+
+            <div class="framework-box" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                <h3>Layer 3: Domain Application Layer</h3>
+                <p><strong>Complex B2B Deal Acceleration</strong></p>
+                <ul>
+                    <li>5-milestone progression framework (Qualification → Handoff)</li>
+                    <li>8 standardized blocker categories with resolution SLAs</li>
+                    <li>Control Tower for exception-based management</li>
+                    <li>Evidence-supported vs. sales-target date comparison</li>
+                </ul>
+                <p style="margin-top: 15px;"><em>Outcome: Deal cycle time reduced 30%; first-time handoff success +25%</em></p>
+            </div>
+
+            <a href="Complex_B2B_Deal_Acceleration_Operating_Model.html" class="cta-button">View Interactive Demo →</a>
+        </section>
+
+        <!-- Core Methodologies -->
+        <section id="methodologies">
+            <h2>Core Methodologies</h2>
+
+            <div class="method-cards">
+                <div class="method-card">
+                    <h4>MEDDPICC Qualification</h4>
+                    <p>8-element framework ensuring evidence-based deal progression:</p>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li><strong>M</strong>etrics: Quantified customer value</li>
+                        <li><strong>E</strong>conomic Buyer: Budget authority</li>
+                        <li><strong>D</strong>ecision Criteria/Process: Evaluation path</li>
+                        <li><strong>P</strong>aper Process: Procurement workflow</li>
+                        <li><strong>I</strong>dentify Pain: Specific business pain</li>
+                        <li><strong>C</strong>hampion: Internal advocate</li>
+                        <li><strong>C</strong>ompetition: Competitive landscape</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-weight: 600;">Commit requirement: 0 Red + Max 1 Yellow</p>
+                </div>
+
+                <div class="method-card">
+                    <h4>Evidence-Driven Forecasting</h4>
+                    <p>Replaced "Sales thinks it will close" with "Evidence supports closure":</p>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li><strong>Commit:</strong> 7 hard requirements validated</li>
+                        <li><strong>Best Case:</strong> 1 key condition pending</li>
+                        <li><strong>Upside:</strong> Progressing, date uncertain</li>
+                        <li><strong>Pipeline:</strong> Early-stage qualification</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-style: italic;">Each category has explicit entry criteria—no probability-based guessing.</p>
+                </div>
+
+                <div class="method-card">
+                    <h4>Red Flag Detection System</h4>
+                    <p>14 automated rules with severity-based escalation:</p>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>🔴 <strong>High:</strong> 24-72h response (e.g., Champion lost)</li>
+                        <li>🟡 <strong>Medium:</strong> 1-week action (e.g., Budget pending)</li>
+                        <li>🟢 <strong>Low:</strong> Monthly review (e.g., Deal age 2× cycle)</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-weight: 600;">Automatic escalation to Directors when SLAs breach</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deliverables -->
+        <section id="deliverables">
+            <h2>Deliverables</h2>
+
+            <h3>Operational Framework</h3>
+            <ul style="padding-left: 25px; line-height: 1.8;">
+                <li><strong>Unified Metrics Dictionary:</strong> 40+ standardized definitions resolving cross-functional conflicts</li>
+                <li><strong>6-Stage Sales Process:</strong> Clear entry/exit criteria for each stage</li>
+                <li><strong>RACI Matrix:</strong> 12 roles × 30 activities with explicit accountability</li>
+                <li><strong>Weekly Operating Rhythm:</strong> Monday risk identification → Friday resolution</li>
+            </ul>
+
+            <h3>Execution Tools</h3>
+            <ul style="padding-left: 25px; line-height: 1.8;">
+                <li><strong>Deal Inspection Card:</strong> Standardized MEDDPICC + Commit validation template</li>
+                <li><strong>Mutual Action Plan (MAP):</strong> Buyer-seller milestone alignment template</li>
+                <li><strong>Red Flag Checklist:</strong> 14-item detection + remediation playbook</li>
+                <li><strong>Forecast Report Template:</strong> Weekly submission with variance analysis</li>
+            </ul>
+
+            <h3>Implementation Package</h3>
+            <ul style="padding-left: 25px; line-height: 1.8;">
+                <li><strong>90-Day Rollout Plan:</strong> Diagnose (30d) → Pilot (30d) → Scale (30d)</li>
+                <li><strong>Success Metrics:</strong> Short-term adoption → Mid-term accuracy → Long-term business outcomes</li>
+                <li><strong>Change Management:</strong> 4 role-specific training programs (CRO, Manager, AE, RevOps)</li>
+            </ul>
+
+            <a href="Unified_Sales_Metrics_Dictionary.html" class="cta-button">View Metrics Dictionary →</a>
+            <a href="RACI_Matrix_and_Implementation_Toolkit.html" class="cta-button">View Implementation Toolkit →</a>
+        </section>
+
+        <!-- Applicable Scenarios -->
+        <section id="applications">
+            <h2>Applicable Environments</h2>
+
+            <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                This framework is designed for complex B2B sales organizations facing long cycles, multiple stakeholders, and high deal values.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="color: #1e3c72; margin-bottom: 10px;">Industries</h4>
+                    <ul style="padding-left: 20px;">
+                        <li>B2B SaaS (Enterprise)</li>
+                        <li>Cloud Infrastructure</li>
+                        <li>System Integration</li>
+                        <li>Professional Services</li>
+                    </ul>
+                </div>
+
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="color: #1e3c72; margin-bottom: 10px;">Deal Characteristics</h4>
+                    <ul style="padding-left: 20px;">
+                        <li>ACV: $200K - $1M+</li>
+                        <li>Cycle: 60-180 days</li>
+                        <li>Stakeholders: 3-7 decision makers</li>
+                        <li>High customization</li>
+                    </ul>
+                </div>
+
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="color: #1e3c72; margin-bottom: 10px;">Team Scale</h4>
+                    <ul style="padding-left: 20px;">
+                        <li>Small (10 AEs): Layers 1-2</li>
+                        <li>Medium (10-50 AEs): Full framework</li>
+                        <li>Large (50+ AEs): Regional customization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sales Operations Portfolio | <a href="mailto:your.email@example.com">Contact</a></p>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
+            Anonymized portfolio case study. Methodologies based on B2B SaaS best practices.
+        </p>
+    </footer>
+</body>
+</html>
